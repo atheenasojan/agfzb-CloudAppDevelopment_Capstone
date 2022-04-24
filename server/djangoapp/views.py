@@ -177,12 +177,12 @@ def get_dealer_details(request, id):
 # ...
 def add_review(request, id):
     context = {}
-    dealer_url = "https://4a529d9a.eu-gb.apigw.appdomain.cloud/api/dealerships"
+    dealer_url = "https://4a529d9a.eu-gb.apigw.appdomain.cloud/api/dealership"
     dealer = get_dealer_by_id_from_cf(dealer_url, id=id)
     context["dealer"] = dealer
     if request.method == 'GET':
         # Get cars for the dealer
-        cars = CarModel.objects.filter(id=id)
+        cars = CarModel.objects.all()
         print(cars)
         context["cars"] = cars
         return render(request, 'djangoapp/add_review.html', context)
