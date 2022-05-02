@@ -27,6 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["atheena.eu-gb.cf.appdomain.cloud", "localhost"]
 
+CSRF_TRUSTED_ORIGINS = ['https://moolayil13-8000.theiadocker-0-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai',"https://atheena.eu-gb.cf.appdomain.cloud",'https://*.127.0.0.1']
 
 # Application definition
 
